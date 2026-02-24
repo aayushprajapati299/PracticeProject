@@ -11,7 +11,7 @@
 #include "MyProject/Actors/Weapons/Weapon.h"
 #include "Perception/AIPerceptionComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
-
+#include "components/BoxComponent.h"
 
 AEnemy::AEnemy()
 {
@@ -21,7 +21,7 @@ AEnemy::AEnemy()
 	GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_Visibility,ECollisionResponse::ECR_Block);
 	GetMesh()->SetGenerateOverlapEvents(true);
 
-	
+	PawnSensing = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("Pawn Sensing"));
 	
 
 

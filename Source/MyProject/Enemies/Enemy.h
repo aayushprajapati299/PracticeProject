@@ -7,6 +7,7 @@
 #include "MyProject/Characters/CharacterStates.h"
 #include "Enemy.generated.h"
 
+class UPawnSensingComponent;
 class AAIController;
 class UAnimMontage;
 class AWeapon;
@@ -81,6 +82,9 @@ private:
 	double AttackRadius=150.f;
 
 	//navigation
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<UPawnSensingComponent> PawnSensing;
+
 	UPROPERTY()
 	TObjectPtr<AAIController> AIController;
 
