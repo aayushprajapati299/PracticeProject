@@ -7,6 +7,7 @@
 #include "MyProject/Characters/CharacterStates.h"
 #include "Enemy.generated.h"
 
+class UPawnSensingComponent;
 class AAIController;
 class UAnimMontage;
 class AWeapon;
@@ -83,6 +84,8 @@ private:
 	//navigation
 	UPROPERTY()
 	TObjectPtr<AAIController> AIController;
+
+	
 
 	UPROPERTY(EditInstanceOnly, Category="AI Navigation")
 	AActor* PatrolTarget;
